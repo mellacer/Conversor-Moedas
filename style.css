@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: radial-gradient(circle, #080815 0%, #0e0f25 100%);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.container {
+  background: #141534;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+h1 {
+  color: #4a5dcd;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.converter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.currency-row {
+  display: flex;
+  gap: 15px;
+  align-items: end;
+}
+
+.currency-input {
+  flex: 2;
+}
+
+.currency-select {
+  flex: 1;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid #0e0f25;
+  background: #0e0f25;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  color: #b2b8de;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #23254e;
+  background: #0e0f25;
+  box-shadow: 0 5px 15px rgba(102, 230, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  color: #b2b8de;
+  font-weight: 600;
+  text-align: left;
+}
+
+.converter-btn {
+  background: #2f34ab;
+  color: #b2b8de;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+}
+
+.converter-btn:hover {
+  box-shadow: 0 5px 15px rgba(102, 230, 234, 0.2);
+  transform: translateY(-2px);
+}
+
+.loading {
+  margin: 20px;
+  display: none;
+}
+
+.loading p {
+  color: #b2b8de;
+}
+
+.spinner {
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #2f34ab;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  margin: 0 auto;
+  animation: spin 0.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.info {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #b2b8de;
+}
+
+.result {
+  background: rgb(125, 252, 245);
+  padding: 20px;
+  margin-top: 30px;
+  color: #020938;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  display: none;
+}
+
+.error {
+  background: yellowgreen;
+  color: #020938;
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 20px;
+  display: none;
+}
